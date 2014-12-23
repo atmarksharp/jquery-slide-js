@@ -7,10 +7,10 @@ jQuery.fn.extend({
     $slide.find('li').each(function(){
       images.push($(this).attr('data-src'));
     });
-    $slide.html('');
+    $slide.attr('id','sl-container').html('');
 
     var __back = $('<div id="sl-back"></div>');
-    var __front = $('<img src="" id="sl-front"/>');
+    var __front = $('<img src="'+images[0]+'" id="sl-front"/>');
     __back.append(__front);
     $slide.append(__back);
 
@@ -25,7 +25,12 @@ jQuery.fn.extend({
     setInterval(function(){
       n1 = i%images.length;
       n2 = (i+1)%images.length;
-      getBack().css('background-image','url('+images[n1]+')');
+      getBack().css({
+        'background-image':'url('+images[n1]+')',
+        'background-size':getFront().width()+'px '+getFront().height()+'px',
+        'background-repeat':'no-repeat',
+        'background-position':'center',
+      })
       getFront().attr('src',images[n2]).hide().fadeIn(fadeTime);
       i++;
     }, waitTime)
