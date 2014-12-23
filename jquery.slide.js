@@ -4,10 +4,10 @@ jQuery.fn.extend({
     var param = params || {};
     var $parent = $(this);
     var $images = $parent.find('img');
-    var w = param['width'] || $($images[0]).width();
-    var h = param['height'] || $($images[0]).height();
-    var bgColor = param['background'] || '#ffffff';
-    $parent.css({'width':w+'px','height':h+'px','background':bgColor,'overflow':'hidden','position':'relative'});
+    var w = param['width'] || $($images[0]).width() + 'px';
+    var h = param['height'] || $($images[0]).height() + 'px';
+    var background = param['background'] || '#ffffff';
+    $parent.css({'width':w,'height':h,'background':background,'overflow':'hidden','position':'relative'});
     $images.removeAttr('hidden').fadeOut(0);
 
     var fadeTime = param['fadeIn'] || 1000;
