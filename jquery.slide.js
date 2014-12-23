@@ -7,7 +7,7 @@ jQuery.fn.extend({
     var w = param['width'] || $($images[0]).width();
     var h = param['height'] || $($images[0]).height();
     var bgColor = param['background'] || '#ffffff';
-    $('#Slide').css({'width':w+'px','height':h+'px','background':bgColor,'overflow':'hidden'});
+    $parent.css({'width':w+'px','height':h+'px','background':bgColor,'overflow':'hidden','position':'relative'});
     $images.removeAttr('hidden').fadeOut(0);
 
     var fadeTime = param['fadeIn'] || 1000;
