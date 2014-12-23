@@ -7,7 +7,7 @@ jQuery.fn.extend({
     $slide.find('li').each(function(){
       images.push($(this).attr('data-src'));
     });
-    $slide.attr('id','sl-container').html('');
+    $slide.addClass('sl-container').html('');
 
     var __back = $('<div id="sl-back"></div>');
     var __front = $('<img src="'+images[0]+'" id="sl-front"/>');
