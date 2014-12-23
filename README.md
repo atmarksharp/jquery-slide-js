@@ -30,7 +30,8 @@ jQuery(function(){
     height: '400px', // slideshow height (optional, default value is a height of first image)
     fadeIn: 1000, // fadein speed (optional, default value is 1000[ms])
     delay: 1000, // delay duration (optional, default value is 1000[ms])
-    background: '#ffffff' // background-color of slideshow (optional, default value is '#ffffff')
+    background: '#ffffff' // background color/image of slideshow (optional, default value is '#ffffff')
+    // background: 'url("./img/first.png");'
   });
 });
 ```
