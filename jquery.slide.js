@@ -9,6 +9,7 @@ jQuery.fn.extend({
     var background = param['background'] || '#ffffff';
     $parent.css({'width':w,'height':h,'background':background,'overflow':'hidden','position':'relative'});
     $images.removeAttr('hidden').fadeOut(0);
+    $($images[$images.length-1]).fadeIn(0);
 
     var fadeTime = param['fadeIn'] || 1000;
     var delayTime = param['delay'] || 1000;
