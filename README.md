@@ -10,8 +10,8 @@ This is the easiest slideshow generator.
 
 ```html
 <div id="slide">
-  <img src="a.png" hidden/>
-  <img src="b.png" hidden/>
+  <li data-src="a.png"/>
+  <li data-src="b.png"/>
 </div>
 ```
 
@@ -26,12 +26,8 @@ jQuery(function(){
 ```javascript
 jQuery(function(){
   $('#slide').slide({
-    width: '600px', // slideshow width (optional, default value is a width of first image)
-    height: '400px', // slideshow height (optional, default value is a height of first image)
     fadeIn: 1000, // fadein speed (optional, default value is 1000[ms])
     delay: 1000, // delay duration (optional, default value is 1000[ms])
-    background: '#ffffff' // background color/image of slideshow (optional, default value is '#ffffff')
-    // background: 'url("./img/first.png");'
   });
 });
 ```
